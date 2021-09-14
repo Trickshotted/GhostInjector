@@ -209,7 +209,7 @@ namespace GhostInjector
             else
                 SetForegroundWindow(windowH);
 
-            done: SetStatus("Injected!");
+            done: SetStatus("Injected! (heroin)");
         }
 
     }
