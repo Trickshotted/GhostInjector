@@ -24,5 +24,51 @@ namespace GhostInjector
         {
             InitializeComponent();
         }
+
+        public SolidColorBrush BrushFromHex(string hexColorString)
+        {
+            return (SolidColorBrush)(new BrushConverter().ConvertFrom(hexColorString));
+        }
+
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void Github_MouseEnter(object sender, MouseEventArgs e)
+        {
+            HomeButtonBorder.Background = BrushFromHex("#FF111111");
+        }
+
+        private void Github_MouseLeave(object sender, MouseEventArgs e)
+        {
+           HomeButtonBorder.Background = BrushFromHex("#FF060606");
+        }
+
+        private void Dev_MouseEnter(object sender, MouseEventArgs e)
+        {
+            DevButtonBorder.Background = BrushFromHex("#FF111111");
+        }
+
+        private void Dev_MouseLeave(object sender, MouseEventArgs e)
+        {
+            DevButtonBorder.Background = BrushFromHex("#FF060606");
+        }
+
+        private void SettingsIcon_MouseEnter(object sender, MouseEventArgs e)
+        {
+            SettingsButtonBorder.Background = BrushFromHex("#FF111111");
+        }
+
+        private void SettingsIcon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            SettingsButtonBorder.Background = BrushFromHex("#FF060606");
+        }
+
+        private void Github_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Body.Content = new Home();
+        }
     }
 }
