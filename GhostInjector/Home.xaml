@@ -32,6 +32,6 @@
                 <SolidColorBrush Color="#FF060D14" Opacity="0"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Label Name="Status" Content="Ready To Inject" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,424,0,0" Foreground="White" FontFamily="Yu Gothic UI"/>
+        <Label Name="Status" Content="Ready To Inject!" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,424,0,0" Foreground="White" FontFamily="Yu Gothic UI"/>
     </Grid>
 </Page>

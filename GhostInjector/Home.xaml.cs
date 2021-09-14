@@ -98,23 +98,49 @@ namespace GhostInjector
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
+            DirectoryInfo rootfolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\Ghost-Client-New.dll");
+            string fileName = rootfolder.ToString();
+
+            WebClient wc = new WebClient();
+          
+
+            try
+            { 
+                if (File.Exists(fileName))
+                {
+                    File.Delete(fileName);
+                    wc.DownloadFile("https://github.com/Intoprelised/Ghost-Releases/releases/download/Releases/Ghost.Client.dll", fileName);
+                }
+                else
+                {
+                    wc.DownloadFile("https://github.com/Intoprelised/Ghost-Releases/releases/download/Releases/Ghost.Client.dll", fileName);
+
+                }
+            }
+            catch (Exception Ex)
+            {
+                Console.WriteLine(Ex.ToString());
+            }
+
+            Inject(fileName);
+
         }
 
         private void Inject(string path)
         {
             if (!File.Exists(path))
             {
-                MessageBox.Show("DLL not found, your Antivirus might have deleted it.");
+                MessageBox.Show("Broken file path. Try reselecting your DLL.");
                 goto done;
             }
 
             if (File.ReadAllBytes(path).Length < 10)
             {
-                MessageBox.Show("DLL broken (Less than 10 bytes)");
+                MessageBox.Show("DLL too small.");
                 goto done;
             }
 
-            SetStatus("setting file perms");
+            SetStatus("Setting file perms...");
             try
             {
                 var fileInfo = new FileInfo(path);
@@ -128,33 +154,12 @@ namespace GhostInjector
                 goto done;
             }
 
-            SetStatus("finding process");
+            SetStatus("Finding process...");
             var processes = Process.GetProcessesByName("Minecraft.Windows");
             if (processes.Length == 0)
             {
-                SetStatus("launching minecraft");
-                if (Interaction.Shell("explorer.exe shell:appsFolder\\Microsoft.MinecraftUWP_8wekyb3d8bbwe!App", Wait: false) == 0)
-                {
-                    MessageBox.Show("Failed to launch Minecraft (Is it installed?)");
-                    goto done;
-                }
-
-                Task.Run(() =>
-                {
-                    int t = 0;
-                    while (processes.Length == 0)
-                    {
-                        if (++t > 200)
-                        {
-                            MessageBox.Show("Minecraft launch took too long.");
-                            return;
-                        }
-
-                        processes = Process.GetProcessesByName("Minecraft.Windows");
-                        Thread.Sleep(10);
-                    }
-                    Thread.Sleep(3000);
-                }).Wait();
+                MessageBox.Show("Minecraft isnt even open are you stupid?");
+                goto done;
             }
             var process = processes.First(p => p.Responding);
 
@@ -162,12 +167,11 @@ namespace GhostInjector
             {
                 if (process.Modules[i].FileName == path)
                 {
-                    MessageBox.Show("Already injected!");
                     goto done;
                 }
             }
 
-            SetStatus("injecting into " + process.Id);
+            SetStatus("Injecting into " + process.Id);
             IntPtr handle = OpenProcess((IntPtr)2035711, false, (uint)process.Id);
             if (handle == IntPtr.Zero || !process.Responding)
             {
@@ -205,7 +209,7 @@ namespace GhostInjector
             else
                 SetForegroundWindow(windowH);
 
-            done: SetStatus("done");
+            done: SetStatus("Injected!");
         }
 
     }
