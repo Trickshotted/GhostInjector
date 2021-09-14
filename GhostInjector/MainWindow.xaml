@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GhostInjector"
         xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" Height="450" Width="650" Background="#FF121212">
+        Title="MainWindow" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None" Height="450" Width="650" Background="#FF121212">
     <Grid>
         <Rectangle Fill="#FF1F374F" HorizontalAlignment="Left" Height="16" Stroke="#FF1F374F" VerticalAlignment="Top" Width="41" Margin="90,0,0,0"/>
         <Rectangle Fill="#FF060D14" HorizontalAlignment="Left" Height="14" Stroke="#FF060D14" VerticalAlignment="Top" Width="41" Margin="90,436,0,0"/>

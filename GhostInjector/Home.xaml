@@ -6,10 +6,32 @@
       xmlns:local="clr-namespace:GhostInjector"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="519"
-      Title="Home">
+      Title="Home" Loaded="Page_Loaded">
     <Page.Background>
         <ImageBrush ImageSource="image (13).png"/>
     </Page.Background>
 
-    <Grid/>
+    <Grid>
+        <Border Name="InjectButton" CornerRadius="15" BorderBrush="#FF1024DA" BorderThickness="1" HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="339" Margin="88,352,0,0" Background="#FF1024DA"/>
+        <Label Content="Inject" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="Label_MouseLeftButtonDown" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,352,0,0" Height="71" Width="339" Foreground="White" FontSize="18" FontFamily="Yu Gothic UI Semibold" Cursor="Hand"/>
+        <Border CornerRadius="20" BorderBrush="#FF1024DA" BorderThickness="2" HorizontalAlignment="Left" Height="305" VerticalAlignment="Top" Width="339" Background="#FF212121" Opacity="0.5" Margin="88,26,0,0"/>
+        <Label  Content="Title" Name="VersionName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,36,0,0" Height="34" Width="339" Foreground="White" FontSize="20" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox Name="MainInfo" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="244" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="317" Margin="99,75,0,0" Foreground="White" FontFamily="Yu Gothic UI" FontSize="14">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <Rectangle HorizontalAlignment="Left" Height="244" VerticalAlignment="Top" Width="317" Margin="99,75,0,0">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="#FF060D14" Opacity="0"/>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF060D14" Opacity="0"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Name="Status" Content="Ready To Inject" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,424,0,0" Foreground="White" FontFamily="Yu Gothic UI"/>
+    </Grid>
 </Page>

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +22,9 @@ namespace GhostInjector
     /// </summary>
     public partial class MainWindow : Window
     {
+
+  
+
         public MainWindow()
         {
             InitializeComponent();
@@ -70,5 +75,13 @@ namespace GhostInjector
         {
             Body.Content = new Home();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Body.Content = new Home();
+        }
+
+       
     }
+
 }
