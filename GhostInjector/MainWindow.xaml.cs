@@ -81,7 +81,13 @@ namespace GhostInjector
             Body.Content = new Home();
         }
 
-       
+        private void Dev_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Body.Content = new Dev();
+        }
+
+
     }
+
 
 }
