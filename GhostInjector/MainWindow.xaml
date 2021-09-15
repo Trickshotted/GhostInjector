@@ -19,19 +19,19 @@
                 <SolidColorBrush Color="#FF060606"/>
             </Border.Background>
         </Border>
-        <fa:ImageAwesome MouseLeftButtonDown="Github_MouseLeftButtonDown" MouseEnter="Github_MouseEnter" MouseLeave="Github_MouseLeave" Icon="Home" VerticalAlignment="Center" HorizontalAlignment="Center" Width="33" Height="33" Name="Github" Foreground="#FF1024DA" Margin="47,138,567,279" Stretch="Fill" Cursor="Hand"></fa:ImageAwesome>
+        <fa:ImageAwesome MouseLeftButtonDown="Github_MouseLeftButtonDown" MouseEnter="Github_MouseEnter" MouseLeave="Github_MouseLeave" Icon="Home" VerticalAlignment="Center" HorizontalAlignment="Center" Width="54" Height="43" Name="Github" Foreground="#FF1024DA" Margin="38,134,558,273" Stretch="Fill" Cursor="Hand"></fa:ImageAwesome>
         <Border Name="DevButtonBorder" BorderBrush="#FF1024DA" CornerRadius="35" BorderThickness="2" HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="75" Margin="27,226,0,0">
             <Border.Background>
                 <SolidColorBrush Color="#FF1024DA" Opacity="0"/>
             </Border.Background>
         </Border>
-        <fa:ImageAwesome MouseEnter="Dev_MouseEnter" MouseLeave="Dev_MouseLeave" MouseLeftButtonDown="Dev_MouseLeftButtonDown" Icon="Gear" VerticalAlignment="Center" HorizontalAlignment="Center" Width="34" Height="33" Name="Dev" Foreground="#FF1024DA" Margin="48,248,568,169" Stretch="Fill" Cursor="Hand"></fa:ImageAwesome>
+        <fa:ImageAwesome MouseEnter="Dev_MouseEnter" MouseLeave="Dev_MouseLeave" MouseLeftButtonDown="Dev_MouseLeftButtonDown" Icon="Gear" VerticalAlignment="Center" HorizontalAlignment="Center" Width="54" Height="53" Name="Dev" Foreground="#FF1024DA" Margin="38,237,558,160" Stretch="Fill" Cursor="Hand"></fa:ImageAwesome>
         <Border Name="SettingsButtonBorder" BorderBrush="#FF1024DA" CornerRadius="35" BorderThickness="2" HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="75" Margin="27,331,0,0">
             <Border.Background>
                 <SolidColorBrush Color="#FF1024DA" Opacity="0"/>
             </Border.Background>
         </Border>
-        <fa:ImageAwesome MouseLeftButtonDown="SettingsIcon_MouseLeftButtonDown" MouseEnter="SettingsIcon_MouseEnter" MouseLeave="SettingsIcon_MouseLeave" Icon="QuestionCircle" VerticalAlignment="Center" HorizontalAlignment="Center" Width="34" Height="33" Name="SettingsIcon" Foreground="#FF1024DA" Margin="48,353,568,64" Stretch="Fill" Cursor="Hand"></fa:ImageAwesome>
+        <fa:ImageAwesome MouseLeftButtonDown="SettingsIcon_MouseLeftButtonDown" MouseEnter="SettingsIcon_MouseEnter" MouseLeave="SettingsIcon_MouseLeave" Icon="QuestionCircle" VerticalAlignment="Center" HorizontalAlignment="Center" Width="54" Height="53" Name="SettingsIcon" Foreground="#FF1024DA" Margin="38,342,558,55" Stretch="Fill" Cursor="Hand"></fa:ImageAwesome>
         <Frame Name="Body" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="519" Margin="131,0,0,0" NavigationUIVisibility="Hidden"/>
 
     </Grid>
