@@ -158,7 +158,7 @@ namespace GhostInjector
             var processes = Process.GetProcessesByName("Minecraft.Windows");
             if (processes.Length == 0)
             {
-                MessageBox.Show("Minecraft isnt even open are you stupid?");
+                MessageBox.Show("Minecraft isnt even open are you stupid kys?");
                 goto done;
             }
             var process = processes.First(p => p.Responding);
@@ -209,7 +209,7 @@ namespace GhostInjector
             else
                 SetForegroundWindow(windowH);
 
-            done: SetStatus("Injected!");
+            done: SetStatus("Injected! (heroin)");
         }
 
     }
