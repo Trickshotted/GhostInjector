@@ -86,7 +86,10 @@ namespace GhostInjector
             Body.Content = new Dev();
         }
 
-
+        private void SettingsIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Body.Content = new Help();
+        }
     }
 
 

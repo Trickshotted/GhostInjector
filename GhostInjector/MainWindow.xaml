@@ -31,7 +31,7 @@
                 <SolidColorBrush Color="#FF1024DA" Opacity="0"/>
             </Border.Background>
         </Border>
-        <fa:ImageAwesome MouseEnter="SettingsIcon_MouseEnter" MouseLeave="SettingsIcon_MouseLeave" Icon="QuestionCircle" VerticalAlignment="Center" HorizontalAlignment="Center" Width="34" Height="33" Name="SettingsIcon" Foreground="#FF1024DA" Margin="48,353,568,64" Stretch="Fill" Cursor="Hand"></fa:ImageAwesome>
+        <fa:ImageAwesome MouseLeftButtonDown="SettingsIcon_MouseLeftButtonDown" MouseEnter="SettingsIcon_MouseEnter" MouseLeave="SettingsIcon_MouseLeave" Icon="QuestionCircle" VerticalAlignment="Center" HorizontalAlignment="Center" Width="34" Height="33" Name="SettingsIcon" Foreground="#FF1024DA" Margin="48,353,568,64" Stretch="Fill" Cursor="Hand"></fa:ImageAwesome>
         <Frame Name="Body" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="519" Margin="131,0,0,0" NavigationUIVisibility="Hidden"/>
 
     </Grid>
