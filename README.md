@@ -1,2 +1,1 @@
-# GhostInjector
-^
+discord.gg/killaura
